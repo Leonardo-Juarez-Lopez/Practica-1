@@ -39,7 +39,7 @@
         {
             float: left;
             width: 20%;
-            height: 550px;
+            height: 690px;
             position: fixed;
             margin: 15px;
             padding: 3px;
@@ -56,8 +56,9 @@
             background-color: aliceblue;
             padding: 30px;
             position: static;
+            float: right;
             margin: 0 auto;
-            width: 100%;
+            width: 76%;
             border: 3px solid rgb(0, 0, 8);
             border-radius: 15px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -82,7 +83,28 @@
         {
             margin: 2%;
         }
-
+        table
+        {
+            width: 80%;
+            border-collapse: collapse;
+            border: 1, black;
+            margin: 20px auto; 
+        }
+        th, td 
+        {
+            padding: 12px;
+            border: 1px solid #000000; 
+            text-align: center; 
+        }
+        .Caja
+        {
+            width: 290px;
+            height: 169px;
+            border: 1px solid rgb(0, 0, 0);
+            display: block;
+            text-align: center; 
+            border-radius: 15px;
+        }
     </style>
 </head>
 <body >
@@ -93,7 +115,19 @@
         
     </div>
     <div id="Contenedor2">
-
+        <div class="Caja" >
+            <a href="https://humanidades.com/periodo-triasico/">Período Triásico</a>
+            <p>El período Triásico, que comenzó hace 248 millones de años, es el primero 
+                de la era Mesozoica.</p>
+        </div>
+        <div class="Caja" >
+            <a href="https://humanidades.com/periodo-jurasico/">Período Jurásico </a>
+            <p>El período Jurásico, que duró 61 millones de años, es conocido por la 
+                proliferación de dinosaurios y el comienzo de la separación de Pangea 
+                en los continentes actuales. </p>
+        </div>
+        <div class="Caja" >Contenido</div>
+        <div class="Caja" >Contenido</div>
     </div>
     <div id="Contenedor">
 
@@ -125,6 +159,24 @@
             dinosaurios son diferenciados más perceptiblemente por su paso. Las patas de los dinosaurios se extienden directamente bajo el cuerpo 
             y son rectas, mientras que las patas de lagartos y cocodrilos se extienden hacia fuera, sobresaliendo.
         </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Clasificacion</th>
+                    <th>Imagen con Ejemplos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Carnivoros</th>
+                    <th><img src="Carnivoros.png" alt="Carnivoros"></th>
+                </tr>
+                <tr>
+                    <th>Herbivoros</th>
+                    <th><img src="Herbivoros.png" alt="Herbivoros"></th>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
