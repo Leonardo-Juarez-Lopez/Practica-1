@@ -9,7 +9,7 @@
 <style>
     .grid-Container
     {
-        display:grid;
+        display: inline-grid;
         grid-template-columns: 100px 100px 100px;
         grid-template-rows: 100px 100px;
         row-gap: 15px;
@@ -31,7 +31,34 @@
     {
         display: grid;
         grid-template-areas:
-        "header header header" ;
+        'header header header header header' 
+        'menu menu main right right'
+        'footer footer main right  right'
+    }
+    .grid div
+    {
+        background-color: rgb(108, 108, 249);
+        border-style: solid;
+    }
+    .Parte1
+    {
+        grid-area: header;
+    }
+    .Parte2
+    {
+        grid-area: menu;
+    }
+    .Parte3
+    {
+        grid-area: main;
+    }   
+    .Parte4
+    {
+        grid-area: right;
+    }   
+    .Parte5
+    {
+        grid-area: footer;
     }
 </style>
 <body>
@@ -47,23 +74,22 @@
     </div>
 
     <div class="grid">
-        <div id="Parte1">
+        <div class="Parte1">
             <p>1</p>
         </div>
-        <div id="Parte2">
+        <div class="Parte2">
             <p>2</p>
         </div>
-        <div id="Parte3">
+        <div class="Parte3">
             <p>3</p>
         </div>
-        <div id="Parte4">
+        <div class="Parte4">
             <p>4</p>
         </div>
-        <div id="Parte5">
+        <div class="Parte5">
             <p>5</p>
         </div>
-        <div id="Parte6">
-            <p>6</p>
+
         </div>
     </div>
 </body>
