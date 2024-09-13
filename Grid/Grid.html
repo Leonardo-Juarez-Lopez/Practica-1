@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-Container
+    {
+        display:grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px;
+        row-gap: 15px;
+        background-color: blueviolet;
+    }
+    #Contenedor1
+    {
+        grid-column: 1/4;
+        grid-row: 1/4;
+        background-color: brown;
+    }
+    #Contenedor2
+    {
+        grid-column: 2/4;
+        grid-row-end: 2/4;
+        background-color: rgb(232, 143, 11);
+    }
+    .grid
+    {
+        display: grid;
+        grid-template-areas:
+        "header header header" ;
+    }
+</style>
+<body>
+    <div class="grid-Container">
+        <div id="Contenedor1">Contenedor1</div>
+        <div id="Contenedor2">Contenedor2</div>
+        <div id="Contenedor3">Contenedor3</div>
+        <div id="Contenedor4">Contenedor4</div>
+        <div id="Contenedor5">Contenedor5</div>
+        <div id="Contenedor6">Contenedor6</div>
+        <div id="Contenedor7">Contenedor7</div>
+
+    </div>
+
+    <div class="grid">
+        <div id="Parte1">
+            <p>1</p>
+        </div>
+        <div id="Parte2">
+            <p>2</p>
+        </div>
+        <div id="Parte3">
+            <p>3</p>
+        </div>
+        <div id="Parte4">
+            <p>4</p>
+        </div>
+        <div id="Parte5">
+            <p>5</p>
+        </div>
+        <div id="Parte6">
+            <p>6</p>
+        </div>
+    </div>
+</body>
+</html>
