@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .grid-Container
+    {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 40% 35% 25%;
+        grid-template-rows: 15% 70% 15%;
+        background-color: blueviolet;
+
+        grid-template-areas: "Encabezado Encabezado Barra2"
+                             "Barra Conte Barra2"
+                             "Piepa Piepa Piepa";
+    }
+    #Contenedor1
+    {
+        grid-area: Encabezado;
+        background-color: brown;
+    }
+    #Contenedor2
+    {
+        grid-area: Barra;
+        background-color: rgb(232, 143, 11);
+    }
+    #Contenedor3 
+    {
+        grid-area: Conte;
+        background-color: bisque;
+    }
+    #Contenedor4 
+    {
+        grid-area: Piepa;
+        background-color: rgb(58, 189, 196);
+    }
+    #Contenedor5 
+    {
+        grid-area: Barra2;
+        background-color: rgb(0, 255, 136);
+    }
+    .grid
+    {
+        display: grid;
+        grid-template-areas:
+        'header header header header header' 
+        'menu menu main right right'
+        'footer footer main right  right'
+    }
+    .grid div
+    {
+        background-color: rgb(108, 108, 249);
+        border-style: solid;
+    }
+
+</style>
+<body>
+    <div class="grid-Container">
+        <div id="Contenedor1">Contenedor1</div>
+        <div id="Contenedor2">Contenedor2</div>
+        <div id="Contenedor3">Contenedor3</div>
+        <div id="Contenedor4">Contenedor4</div>
+        <div id="Contenedor5">Contenedor5</div>
+    </div>
+
+</body>
+</html>
