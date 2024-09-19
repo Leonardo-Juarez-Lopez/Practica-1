@@ -64,14 +64,36 @@
         background-color: rgb(108, 108, 249);
         border-style: solid;
     }
-
+    .cajaflotante
+    {
+        border: 1px solid rebeccapurple;
+        float: left;
+        width: calc((100% /3) - 20px);
+        height: calc(100% - 20px);
+        margin: 10px;
+        text-align: center;
+        padding: 30px;
+    }
+    .cajaflex
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 40px;
+    }
 </style>
 <body>
     <div class="grid-Container">
-        <div id="Contenedor1">Contenedor1</div>
+        <div id="Contenedor1">
+            <div class="cajaflotante">Contenido1.1</div>
+            <div class="cajaflotante">Contenido1.2</div>
+            <div class="cajaflotante">Contenido1.3</div>
+        </div>
         <div id="Contenedor2">Contenedor2</div>
         <div id="Contenedor3">Contenedor3</div>
-        <div id="Contenedor4">Contenedor4</div>
+        <div id="Contenedor4">
+            <div class="cajaflex">Contenido1.1</div>
+        </div>
         <div id="Contenedor5">Contenedor5</div>
     </div>
 
