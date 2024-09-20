@@ -20,7 +20,7 @@
         height: 100vh;
         grid-template-columns: 40% 35% 25%;
         grid-template-rows: 15% 70% 15%;
-        background-color: blueviolet;
+        background-color: rgb(152, 252, 255);
 
         grid-template-areas: "Encabezado Encabezado Barra2"
                              "Barra Conte Barra2"
@@ -28,13 +28,24 @@
     }
     #Contenedor1
     {
+        
+        margin: 5px;
+        padding: 3px;
+        border: 3px solid blue;
+        border-radius: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         grid-area: Encabezado;
-        background-color: brown;
+        background-color: rgb(120, 177, 246);
     }
     #Contenedor2
     {
+        margin: 5px;
+        padding: 3px;
+        border: 3px solid rgb(81, 81, 242);
+        border-radius: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         grid-area: Barra;
-        background-color: rgb(232, 143, 11);
+        background-color: rgb(154, 136, 235);
     }
     #Contenedor3 
     {
@@ -67,12 +78,31 @@
     .cajaflotante
     {
         border: 1px solid rebeccapurple;
+        border-radius: 15px;
         float: left;
         width: calc((100% /3) - 20px);
         height: calc(100% - 20px);
-        margin: 10px;
+        margin: 8px;
         text-align: center;
-        padding: 30px;
+        padding: 14px;
+        background-color: rgb(247, 204, 144);
+    }
+    .CajaFlotante
+    {
+        border: 1px solid rebeccapurple;
+        border-radius: 15px;
+
+        width: calc(100% - 20px);
+        height: calc((100% / 3 ) - 20px);
+        margin: 5px;
+        padding: 20px;
+        background-color: rgb(247, 204, 144); 
+    }
+    .CajaFlotante img
+    {
+        float: right;
+        width: 20vw;
+        height: 10vh;
     }
     .cajaflex
     {
@@ -85,11 +115,27 @@
 <body>
     <div class="grid-Container">
         <div id="Contenedor1">
-            <div class="cajaflotante">Contenido1.1</div>
-            <div class="cajaflotante">Contenido1.2</div>
-            <div class="cajaflotante">Contenido1.3</div>
+            <div class="cajaflotante">
+                <h1>Gatos</h1>
+            </div>
+            <div class="cajaflotante">
+                <h3>Leonardo Juarez</h3>
+            </div>
+            <div class="cajaflotante">
+                <h3>Miguel Davila</h3>
+            </div>
         </div>
-        <div id="Contenedor2">Contenedor2</div>
+        <div id="Contenedor2">
+            <h2>Gatos Famosos</h2>
+            <div class="CajaFlotante">
+
+                <h5>Garfi: El enfado personificado</h5>
+                <img src="Gato_Enfadado.JPG">
+            </div>
+            <div class="CajaFlotante"></div>
+            <div class="CajaFlotante"></div>
+
+        </div>
         <div id="Contenedor3">Contenedor3</div>
         <div id="Contenedor4">
             <div class="cajaflex">Contenido1.1</div>
