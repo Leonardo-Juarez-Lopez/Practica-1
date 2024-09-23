@@ -49,8 +49,18 @@
     }
     #Contenedor3 
     {
+        margin: 5px;
+        padding: 3px;
+        border: 3px solid rgb(81, 81, 242);
+        border-radius: 15px;
         grid-area: Conte;
-        background-color: bisque;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: rgb(164, 211, 255);
+    }
+    #Contenedor3 p
+    {
+        margin: 5px;
+        padding: 5px;
     }
     #Contenedor4 
     {
@@ -91,18 +101,17 @@
     {
         border: 1px solid rebeccapurple;
         border-radius: 15px;
-
         width: calc(100% - 20px);
         height: calc((100% / 3 ) - 20px);
         margin: 5px;
         padding: 20px;
+        text-align: center;
         background-color: rgb(247, 204, 144); 
     }
     .CajaFlotante img
     {
-        float: right;
         width: 20vw;
-        height: 10vh;
+        height: 13vh;
     }
     .cajaflex
     {
@@ -110,6 +119,13 @@
         flex-direction: row-reverse;
         justify-content: center;
         padding: 40px;
+    }
+    #Contenedor3 img
+    {
+        padding: 5px;
+        float: right;
+        width: 18vw;
+
     }
 </style>
 <body>
@@ -129,14 +145,42 @@
             <h2>Gatos Famosos</h2>
             <div class="CajaFlotante">
 
-                <h5>Garfi: El enfado personificado</h5>
+                <h3>Garfi: El enfado personificado</h3>
                 <img src="Gato_Enfadado.JPG">
             </div>
-            <div class="CajaFlotante"></div>
-            <div class="CajaFlotante"></div>
+            <div class="CajaFlotante">
+                <h4>Grumpy Cat: La reina de los memes</h4>
+                <img src="Meme.JPG">
+            </div>
+            <div class="CajaFlotante">
+                <h4>Colonel Meow: El Gato con Récord Mundial</h4>
+                <img src="Record_Mundial.JPG">
+            </div>
 
         </div>
-        <div id="Contenedor3">Contenedor3</div>
+        <div id="Contenedor3">
+            <img src="Gato.jpg">
+
+            <p>Los gatos son una de las mascotas más populares del mundo. 
+                También se encuentran entre los animales más interesantes 
+                para estudiar. Las características de los gatos son muchas y 
+                únicas, puesto que, algunas de ellas no se encuentran en otros 
+                animales domésticos.
+               Los gatos son curiosos por naturaleza y les encanta explorar. 
+               Son animales muy independientes y no les gusta depender de sus dueños. 
+               Son animales domésticos que necesitan hacer mucho ejercicio al día, es por 
+               ello, que son cazadores por naturaleza y pueden llegar a jugar durante muchas 
+               horas.</p>
+            <p>
+                Como todos sabemos, los gatos son conocidos por su inteligencia, alegría y agilidad. 
+                Algunas personas han argumentado que los gatos se han vuelto tan comunes porque tienen 
+                una personalidad humana: autosuficientes, distantes con los extraños y territoriales, 
+                pero afectuosos con los miembros de la familia.
+                Otros dicen que la naturaleza independiente de los gatos los hace más fáciles de cuidar 
+                que los perros u otras mascotas. En cualquier caso, las características de los gatos han 
+                enamorado desde siempre a muchas personas.
+            </p>
+        </div>
         <div id="Contenedor4">
             <div class="cajaflex">Contenido1.1</div>
         </div>
