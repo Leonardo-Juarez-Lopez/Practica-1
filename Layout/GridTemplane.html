@@ -127,6 +127,32 @@
         width: 18vw;
 
     }
+    .CajaFlotante2 img
+    {
+
+
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    .imagen-hover {
+        width: 200px;
+        height: 90%;
+        transition: transform 0.5s ease; /* Transición suave */
+    }
+    .imagen-hover:hover {
+        transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+        cursor: pointer; /* Cambia el cursor a una mano */
+    }
+    .imagen-hover2 {
+        width: 10%;
+        height: 10%;
+        transition: transform 0.5s ease; /* Transición suave */
+    }
+    .imagen-hover2:hover {
+        transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+        cursor: pointer; /* Cambia el cursor a una mano */
+    }
 </style>
 <body>
     <div class="grid-Container">
@@ -182,9 +208,30 @@
             </p>
         </div>
         <div id="Contenedor4">
-            <div class="cajaflex">Contenido1.1</div>
+            <a href="https://mascotafiel.com/gatos-mas-famosos-de-la-historia/">Enlace de gatos</a>
         </div>
-        <div id="Contenedor5">Contenedor5</div>
+        <div id="Contenedor5">
+            <div class="CajaFlotante2">
+                <a href="https://www.wikidex.net/wiki/Meowth" target="_blank" rel="noopener noreferrer">
+                    <img src="OIP.jfif" class="imagen-hover" alt="Meowth">
+                </a>
+            </div>
+            <div class="CajaFlotante2">
+                <a href="https://sabrinalabrujaadolescente.fandom.com/es/wiki/Salem_Saberhagen" target="_blank" rel="noopener noreferrer">
+                    <img src="Salem_Saberhagen.webp" class="imagen-hover" alt="Salem Saberhagen">
+                </a>
+            </div>
+            <div class="CajaFlotante2">
+                <a href="https://www.milenio.com/cultura/la-historia-de-garfield-el-gato-mas-famoso-de-la-television" target="_blank" rel="noopener noreferrer">
+                    <img src="R.jfif" class="imagen-hover" alt="Garfield">
+                </a>
+            </div>
+            <div class="CajaFlotante2">
+                <a href="https://es.wikipedia.org/wiki/Grumpy_Cat" target="_blank" rel="noopener noreferrer">
+                    <img src="miudth.jfif" class="imagen-hover" alt="Grumpy Cat">
+                </a>
+            </div>
+        </div>
     </div>
 
 </body>
