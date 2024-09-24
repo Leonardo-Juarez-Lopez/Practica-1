@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *
+    {
+        box-sizing: content-box;
+        padding: 0%;
+    }
+    .Contenedor
+    {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+    .hijos
+    {
+        background-color: rgb(255, 17, 17);
+        border: 1vh solid blue;
+        flex-grow: 1;
+        text-align: center;
+    }
+    @media screen and (max-width:500px)
+    {
+        .Contenedor
+        {
+            flex-direction: column;
+        }
+    }
+</style>
+<body>
+    <div class="Contenedor">
+        <div class="hijos">Hijo 1</div>
+        <div class="hijos">Hijo 2</div>
+        <div class="hijos">Hijo 3</div>
+        <div class="hijos">Hijo 4</div>
+        <div class="hijos">Hijo 5</div>
+        <div class="hijos">Hijo 6</div>
+    </div>
+</body>
+</html>
