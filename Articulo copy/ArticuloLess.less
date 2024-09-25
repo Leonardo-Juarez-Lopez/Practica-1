@@ -1,101 +1,117 @@
 @Color-border: rgb(1, 56,8);
-*{
-        
+* {
     box-sizing: border-box;
     margin: 0;
-    padding: 0; 
-
- }
- body
- {
-     
-     background-image: url(fONDO.jpg);
-     background-repeat: no-repeat; /* Para evitar que la imagen se repita */
-     background-size: cover; /* Para hacer que la imagen cubra toda la pantalla */
-     background-position: center; /* Centra la imagen en la página */
-     background-attachment: fixed;
-     margin: 15px;
-     padding: 15px;
- }
- #Contenedor 
- {
-     float: right;
-     width: 75%;
-     margin: 15px;
-     padding: 3px;
-     border: 3px solid @Color-border;
-     border-radius: 15px;
-     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     line-height: 1.5em;
-     background-color: rgb(120, 247, 92);
- }
- #Contenedor2
- {
-     float: left;
-     width: 20%;
-     height: 690px;
-     position: fixed;
-     margin: 15px;
-     padding: 3px;
-     border: 3px solid rgb(1, 56, 8);
-     border-radius: 15px;
-     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     line-height: 1.5em;
-     background-color: rgb(120, 247, 92);
- }
- #encabezado
- { 
-     display: flex;
-     align-items: center;
-     background-color: aliceblue;
-     padding: 30px;
-     position: static;
-     float: right;
-     margin: 0 auto;
-     width: 76%;
-     border: 3px solid rgb(0, 0, 8);
-     border-radius: 15px;
-     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     line-height: 1.5em;
- }
- .imagen img
- {
-     margin: 20px;
-     width: 80%;
-     height: 70%;
- }
- #encabezado img
- {
-     border: 2px solid #b50202; 
-     border-radius: 5px; 
-     width: 100px; 
-     height: 100px; 
-     object-fit: cover; 
-     border-radius: 50%; 
- }
- p
- {
-     margin: 2%;
- }
- table
- {
-     width: 80%;
-     border-collapse: collapse;
-     border: 1, black;
-     margin: 20px auto; 
- }
- th, td 
- {
-     padding: 12px;
-     border: 1px solid #000000; 
-     text-align: center; 
- }
- .Caja
- {
-     width: 290px;
-     height: 169px;
-     border: 1px solid rgb(0, 0, 0);
-     display: block;
-     text-align: center; 
-     border-radius: 15px;
- }
+    padding: 0;
+  }
+  
+  body {
+    background-image: url(fONDO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center;
+    background-attachment: fixed;
+    margin: 15px;
+    padding: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5em;
+  }
+  
+  /* Estructura principal usando flexbox */
+  #main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #Contenedor {
+    flex: 1 1 70%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 70% */
+    margin: 15px;
+    padding: 3px;
+    border: 3px solid #013808;
+    border-radius: 15px;
+    background-color: #78f75c;
+    min-width: 300px; /* Ancho mínimo para dispositivos pequeños */
+  }
+  
+  #Contenedor2 {
+    flex: 1 1 25%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 25% */
+    margin: 15px;
+    padding: 3px;
+    border: 3px solid #013808;
+    border-radius: 15px;
+    background-color: #78f75c;
+    min-width: 200px; /* Ancho mínimo para dispositivos pequeños */
+  }
+  
+  #encabezado {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 30px;
+    margin: 15px auto;
+    width: 100%;
+    max-width: 1200px;
+    border: 3px solid #000008;
+    border-radius: 15px;
+  }
+  
+  .imagen img {
+    margin: 20px;
+    max-width: 100%; /* Se adapta al tamaño del contenedor */
+    height: auto;
+  }
+  
+  #encabezado img {
+    border: 2px solid #b50202;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  p {
+    margin: 2%;
+  }
+  
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid #000000;
+    text-align: center;
+  }
+  
+  .Caja {
+    width: 100%; /* Se adapta al tamaño del contenedor */
+    max-width: 290px;
+    height: auto; /* Se adapta al contenido */
+    border: 1px solid #000000;
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px auto;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    #Contenedor, #Contenedor2 {
+      flex: 1 1 100%; /* Los contenedores ocuparán todo el ancho en pantallas pequeñas */
+    }
+  
+    #encabezado {
+      flex-direction: column; /* Cambia la orientación del encabezado */
+      text-align: center; /* Centra el contenido */
+    }
+  
+    .imagen img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
