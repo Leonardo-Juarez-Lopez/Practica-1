@@ -1,6 +1,5 @@
 @Color-border: rgb(1, 56, 8);
 
-/* Mixins para estilos de borde y contenedor */
 .borde-estilo(@color, @ancho: 3px, @radio: 15px) {
   border: @ancho solid @color;
   border-radius: @radio;
@@ -32,7 +31,6 @@ body {
   line-height: 1.5em;
 }
 
-/* Estructura principal usando flexbox */
 #main-container {
   display: flex;
   flex-wrap: wrap;
@@ -40,12 +38,12 @@ body {
 }
 
 #Contenedor {
-  flex: 1 1 70%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 70% */
+  flex: 1 1 70%; 
   .contenedor-estilo(#78f75c, 300px);
 }
 
 #Contenedor2 {
-  flex: 1 1 25%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 25% */
+  flex: 1 1 25%; 
   .contenedor-estilo(#78f75c, 200px);
 }
 
@@ -70,7 +68,7 @@ body {
 
 .imagen img {
   margin: 20px;
-  max-width: 100%; /* Se adapta al tamaño del contenedor */
+  max-width: 100%; 
   height: auto;
 }
 
@@ -92,9 +90,9 @@ table {
 }
 
 .Caja {
-  width: 100%; /* Se adapta al tamaño del contenedor */
+  width: 100%; 
   max-width: 290px;
-  height: auto; /* Se adapta al contenido */
+  height: auto; 
   border: 1px solid #000000;
   display: block;
   text-align: center;
@@ -102,18 +100,17 @@ table {
   margin: 10px auto;
 }
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   #main-container {
     #Contenedor,
     #Contenedor2 {
-      flex: 1 1 100%; /* Los contenedores ocuparán todo el ancho en pantallas pequeñas */
+      flex: 1 1 100%; 
     }
   }
 
   #encabezado {
-    flex-direction: column; /* Cambia la orientación del encabezado */
-    text-align: center; /* Centra el contenido */
+    flex-direction: column; 
+    text-align: center; 
   }
 
   .imagen img {

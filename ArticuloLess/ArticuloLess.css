@@ -1,4 +1,3 @@
-/* Mixins para estilos de borde y contenedor */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +15,6 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5em;
 }
-/* Estructura principal usando flexbox */
 #main-container {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +22,6 @@ body {
 }
 #Contenedor {
   flex: 1 1 70%;
-  /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 70% */
   margin: 15px;
   padding: 3px;
   background-color: #78f75c;
@@ -34,7 +31,6 @@ body {
 }
 #Contenedor2 {
   flex: 1 1 25%;
-  /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 25% */
   margin: 15px;
   padding: 3px;
   background-color: #78f75c;
@@ -63,7 +59,6 @@ body {
 .imagen img {
   margin: 20px;
   max-width: 100%;
-  /* Se adapta al tamaño del contenedor */
   height: auto;
 }
 p {
@@ -82,28 +77,22 @@ table td {
 }
 .Caja {
   width: 100%;
-  /* Se adapta al tamaño del contenedor */
   max-width: 290px;
   height: auto;
-  /* Se adapta al contenido */
   border: 1px solid #000000;
   display: block;
   text-align: center;
   border-radius: 15px;
   margin: 10px auto;
 }
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   #main-container #Contenedor,
   #main-container #Contenedor2 {
     flex: 1 1 100%;
-    /* Los contenedores ocuparán todo el ancho en pantallas pequeñas */
   }
   #encabezado {
     flex-direction: column;
-    /* Cambia la orientación del encabezado */
     text-align: center;
-    /* Centra el contenido */
   }
   .imagen img {
     width: 100%;
