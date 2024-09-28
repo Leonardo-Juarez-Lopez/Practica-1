@@ -1,3 +1,4 @@
+/* Mixins para estilos de borde y contenedor */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,22 +27,20 @@ body {
   /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 70% */
   margin: 15px;
   padding: 3px;
+  background-color: #78f75c;
   border: 3px solid #013808;
   border-radius: 15px;
-  background-color: #78f75c;
   min-width: 300px;
-  /* Ancho mínimo para dispositivos pequeños */
 }
 #Contenedor2 {
   flex: 1 1 25%;
   /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 25% */
   margin: 15px;
   padding: 3px;
+  background-color: #78f75c;
   border: 3px solid #013808;
   border-radius: 15px;
-  background-color: #78f75c;
   min-width: 200px;
-  /* Ancho mínimo para dispositivos pequeños */
 }
 #encabezado {
   display: flex;
@@ -54,18 +53,18 @@ body {
   border: 3px solid #000008;
   border-radius: 15px;
 }
-.imagen img {
-  margin: 20px;
-  max-width: 100%;
-  /* Se adapta al tamaño del contenedor */
-  height: auto;
-}
 #encabezado img {
   border: 2px solid #b50202;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+.imagen img {
+  margin: 20px;
+  max-width: 100%;
+  /* Se adapta al tamaño del contenedor */
+  height: auto;
 }
 p {
   margin: 2%;
@@ -75,8 +74,8 @@ table {
   border-collapse: collapse;
   margin: 20px auto;
 }
-th,
-td {
+table th,
+table td {
   padding: 12px;
   border: 1px solid #000000;
   text-align: center;
@@ -95,8 +94,8 @@ td {
 }
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-  #Contenedor,
-  #Contenedor2 {
+  #main-container #Contenedor,
+  #main-container #Contenedor2 {
     flex: 1 1 100%;
     /* Los contenedores ocuparán todo el ancho en pantallas pequeñas */
   }
