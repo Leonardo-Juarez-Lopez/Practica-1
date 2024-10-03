@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0.5px;
+          padding: 0.5px;
+        }
+        
+        table {
+          width: 100%;
+        }
+        
+        table, td {
+          border: 2px solid rgb(10, 10, 10);
+          transition: background-color 0.5s ease-in-out, 
+                      color 0.5s ease-in-out, 
+                      border 0.5s ease-in-out, 
+                      box-shadow 0.5s ease-in-out;;
+        }
+        
+        tbody > tr:nth-child(odd) {
+          background-color: rgb(76, 255, 106);
+        }
+        tbody > tr:nth-child(even) {
+          background-color: rgb(163, 255, 169);
+        }
+        
+        tbody > tr> td:hover {
+          background-color: rgb(175, 216, 248); 
+          color: rgb(0, 0, 0);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          border: 2px solid rgb(60, 100, 180); 
+        }
+        tbody > tr > td:active 
+        {
+          background-color: rgb(33, 150, 243); 
+          color: rgb(255, 255, 255); 
+          border: 2px solid rgb(0, 77, 153);
+       }
+        
+        tbody tr > td:first-child {
+          background-color: rgb(4, 103, 0);
+          color: rgb(253, 253, 253);
+          text-align: center;
+        }
+        .Dias th 
+        {
+          border: 2px solid black;
+          background-color: rgb(4, 103, 0);
+          color: rgb(253, 253, 253);
+          text-align: center;
+        }
+        thead tr > th
+        {
+          background-color: rgb(4, 103, 0);
+          color: rgb(253, 253, 253);
+          text-align: center;
+        }
+        @media screen and (max-width: 500px) {
+          table, tbody, thead, tr, td {
+            display: line;
+          }
+        }
+        @media screen and (max-width: 800px) {
+          table, tbody, thead, tr, td {
+            display: line;
+          }
+        }
+      </style>
+</head>
+<body>
+    <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Horario 5 Semestre</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <thead class="Dias">
+                <tr >
+                  <th>Horario</th>
+                  <th>Lunes</th>
+                  <th>Martes</th>
+                  <th>Miercoles</th>
+                  <th>Jueves</th>
+                  <th>Viernes</th>
+              </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td>7:00 a 8:00</td>
+                <td>Programacion web</td>
+                <td>Programacion web</td>
+                <td>Programacion web</td>
+                <td>Programacion web</td>
+                <td>Programacion web</td>
+            </tr>
+            <tr>
+                <td>8:00 a 9:00</td>
+                <td>Libre</td>
+                <td>Fundamento Ingenieria de software</td>
+                <td>Sistemas Operativo</td>
+                <td>Fundamento Ingenieria de software</td>
+                <td>Sistema Operativo</td>
+            </tr>
+            <tr>
+                <td>9:00 a 10:00</td>
+                <td>Libre</td>
+                <td>Fundamento Ingenieria de software</td>
+                <td>Sistemas Operativo</td>
+                <td>Fundamento Ingenieria de software</td>
+                <td>Sistemas Operativo</td>
+            </tr>
+            <tr>
+                <td>10:00 a 11:00</td>
+                <td>Libre</td>
+                <td>Libre</td>
+                <td>Libre</td>
+                <td>Libre</td>
+                <td>Libre</td>
+            </tr>
+            <tr>
+                <td>11:00 a 12:00</td>
+                <td>Arquitectura de Computadora</td>
+                <td>Fundamentos de Telecomunicaciones</td>
+                <td>Fundamentos de Telecomunicaciones</td>
+                <td>Fundamentos de Telecomunicaciones</td>
+                <td>Arquitectura de Computadora</td>
+            </tr>
+            <tr>
+              <td>12:00 a 1:00</td>
+              <td>Arquitectura de Computadora</td>
+              <td>Fundamentos de Telecomunicaciones</td>
+              <td>Arquitectura de Computadora</td>
+              <td>Libre</td>
+              <td>Arquitectura de Computadora</td>
+          </tr>
+          <tr>
+            <td>1:00 a 2:00</td>
+            <td>Libre</td>
+            <td>Libre</td>
+            <td>Libre</td>
+            <td>Libre</td>
+            <td>Libre</td>
+        </tr>
+          <tr>
+            <td>2:00 a 3:00</td>
+            <td>Graficacion</td>
+            <td>Graficacion</td>
+            <td>Graficacion</td>
+            <td>Graficacion</td>
+            <td>Libre</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
