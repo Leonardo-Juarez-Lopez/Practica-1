@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Jokes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333;
+            color: #f1c40f;
+            font-family: 'Rock Salt', cursive;
+            text-align: center;
+            padding-top: 20px;
+        }
+        #res {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #555;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chuck Norris(Miguel Davila  y Leo Juarez ) </h1>
+    <p>Elige el metodo de seleccion de dato </p>
+    
+    <button id="but" class="btn btn-danger btn-lg">Chuck norris</button>
+    <button id="butasync" class="btn btn-warning btn-lg">Chuck norris async</button>
+    <button id="butxml" class="btn btn-dark btn-lg">Chuck norris xml</button>
+    
+    <div id="res"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('butxml').addEventListener('click', () => {
+            let solicitud = new XMLHttpRequest();
+            solicitud.onload = function() {
+                let objetoJson = JSON.parse(solicitud.response);
+                document.getElementById('res').innerText = objetoJson.value;
+            }
+            solicitud.open("GET", "https://api.chucknorris.io/jokes/random", true);
+            solicitud.send();
+        });
+
+        document.getElementById('but').addEventListener('click', () => {
+            fetch('https://api.chucknorris.io/jokes/random')
+                .then(resultado => resultado.json())
+                .then(dato => document.getElementById('res').innerText = dato.value)
+        });
+
+        document.getElementById('butasync').addEventListener('click', async () => {
+            let resultado = await fetch('https://api.chucknorris.io/jokes/random');
+            let dato = await resultado.json();
+            document.getElementById('res').innerText = dato.value;
+        });
+    </script>
+</body>
+</html>
