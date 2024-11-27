@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
 </head>
 <body>
-    <form style="display: block;" enctype="multipart/form-data" id="Forma" >
-        <label for="Nombre" class="form-label" >Nombre Completo: </label>
-        <input type="text" id="Nombre" placeholder="Fulano De Tal">
+    <form id="Forma" enctype="multipart/form-data">
+        <label for="Nombre" class="form-label">Nombre Completo: </label>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Fulano De Tal" required>
         <br>
-        <label for="Archivo" class="form-label" >Subir Archivo: </label>
-        <input type="file" id="Archivo" name="archivo">
+        <label for="Archivo" class="form-label">Subir Archivo: </label>
+        <input type="file" id="Archivo" name="archivo" accept=".jpg,.jpeg,.png" required>
         <br>
-        <button>Enviar</button>
+        <button type="button" id="btnEnviar">Enviar</button>
     </form>
+
+    <script src="./BotonEnviar.js"></script>
 </body>
 </html>
